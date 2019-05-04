@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import main.money.Franc;
 import main.money.Money;
 
 public class MoneyTest {
@@ -38,6 +39,11 @@ public class MoneyTest {
 	public void testCurreny() {
 		assertEquals("USD", Money.dollar(1).currency());
 		assertEquals("CHF", Money.franc(1).currency());
+	}
+	
+	@Test
+	public void testDifferentClassEquality() {
+		assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
 	}
 	
 }
