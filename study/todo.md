@@ -3,3 +3,4 @@
 + ~~통화?~~
 + Dollar/Franc 중복
 + testFrancMultiplication 제거
++ ~~공용 times~~
