@@ -7,8 +7,7 @@ class TestCase:
     def setUp(self):
         pass
         
-    def run(self):
-        result = TestResult()
+    def run(self, result):
         result.testStarted()
         self.setUp()
 
@@ -17,10 +16,8 @@ class TestCase:
             method()
         except:
             result.testFailed()
-            
-        self.tearDown()
 
-        return result
+        self.tearDown()
 
     def tearDown(self):
         pass
